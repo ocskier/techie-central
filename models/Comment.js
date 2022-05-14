@@ -8,7 +8,7 @@ Comment.init(
   {
     // Model attributes are defined here
     body: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         isEmpty: false,

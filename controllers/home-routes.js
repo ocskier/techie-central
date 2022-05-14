@@ -5,7 +5,7 @@ const { Post, Comment, User } = require('../models');
 router.get('/', async (req, res) => {
   try {
     // we need to get all Posts and include the User for each (change lines 8 and 9)
-    const postData = await Post.someSequelizeMethod({
+    const postData = await Post.findAll({
       include: [User],
     });
     // serialize the data

@@ -1,9 +1,7 @@
 module.exports = (req, res, next) => {
-  if (req.user) {
+  if (req.session.loggedIn) {
     next();
   } else {
-    res.status(401).json({
-      message: 'You must be logged in to perform this action.',
-    });
+    res.redirect('/login');
   }
 };
